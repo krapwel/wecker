@@ -1,59 +1,57 @@
 # Nightscout Nachtwecker
 
-Eine Android-App, die deinen Blutzuckerwert aus Nightscout im Blick behält und Alarm schlägt, wenn er zu hoch oder zu niedrig ist – auch nachts, auch wenn das Handy gesperrt ist.
+Android-App, die den Blutzuckerwert aus Nightscout überwacht und bei Grenzwertüberschreitung oder Verbindungs-/Sensorfehler einen Alarm auslöst – auch bei gesperrtem Bildschirm.
 
 > 🤖 Dieses Projekt (Code, Design und diese Anleitung) wurde vollständig mit KI erstellt.
 
-> ⚠️ Die App ist für den persönlichen Gebrauch gedacht. Bitte die Hinweise zur Zuverlässigkeit unten beachten.
+> ⚠️ Die App ist für den persönlichen Gebrauch gedacht. Siehe Hinweise zur Zuverlässigkeit unten.
 
 ---
 
 ## Voraussetzungen
 
-- Ein **Android-Handy**
-- Ein erreichbarer **Nightscout-Server** (die URL davon, z. B. `https://meine-seite.herokuapp.com`)
-  - Es wird **kein Login/Token benötigt** – die App liest die Werte nur lesend aus der URL
-
-Das war's schon an Voraussetzungen.
+- Android-Handy
+- Erreichbarer Nightscout-Server (die URL, z. B. `https://meine-seite.herokuapp.com`)
+  - Kein Login/Token erforderlich – die App greift nur lesend auf die URL zu
 
 ---
 
 ## Einrichtung
 
-1. App öffnen → oben rechts auf das **☁️-Symbol** tippen → Nightscout-URL eingeben, untere und obere Grenze (mg/dL) festlegen → Speichern
-2. Oben links auf das **Wecker-Symbol** tippen → Alarmton auswählen (eigene MP3s können importiert werden), Vibration ein/aus
+1. Oben rechts auf das ☁️-Symbol tippen → Nightscout-URL eingeben, untere und obere Grenze (mg/dL) festlegen → Speichern
+2. Oben links auf das Wecker-Symbol tippen → Alarmton auswählen (eigene MP3s können importiert werden), Vibration ein/aus
 3. Auf der Startseite auf **System** tippen und dort:
    - Akku-Optimierung für die App deaktivieren
    - „Nicht stören"-Berechtigung erteilen
 
-   Beides ist wichtig, damit der Alarm auch zuverlässig auslöst.
+   Beides ist Voraussetzung für zuverlässige Alarmauslösung.
 
 ---
 
-## Wann klingelt der Alarm?
+## Alarmauslösung
 
-| Situation | Wann |
-|-----------|------|
-| 🩸 Wert außerhalb der Grenzen | Blutzucker über oder unter deiner eingestellten Grenze |
+| Situation | Bedingung |
+|-----------|-----------|
+| 🩸 Wert außerhalb der Grenzen | Blutzucker über oder unter der eingestellten Grenze |
 | 📡 Sensorfehler | Seit über 15 Minuten kein neuer Messwert |
 | 🌐 Verbindungsproblem | Server seit ca. 16 Minuten nicht erreichbar |
 
-Während einer aktiven Snooze-Phase bleibt es still.
+Während einer aktiven Snooze-Phase werden keine Alarme ausgelöst.
 
 ---
 
-## Alarm ausschalten
+## Alarm quittieren
 
-Der Alarm stoppt nur, wenn eine kleine Rechenaufgabe gelöst wird (z. B. `4 + 7 + 3`) – so verhindert man, dass man ihn im Halbschlaf einfach wegtippt. Der Bestätigen-Knopf ist außerdem 10 Sekunden gesperrt.
+Der Alarm stoppt erst nach Lösen einer Rechenaufgabe (z. B. `4 + 7 + 3`). Der Bestätigen-Knopf ist zusätzlich 10 Sekunden gesperrt.
 
-Danach ist automatisch 15 Minuten Ruhe (Snooze), bevor der nächste Alarm möglich ist.
+Nach der Quittierung gilt automatisch eine 15-minütige Snooze-Phase.
 
-Auf der **Snooze-Seite** kann man auch selbst eine Pause in Minuten eintragen oder eine laufende Pause sofort beenden.
+Auf der Snooze-Seite kann eine Pause auch manuell in Minuten eingetragen oder eine laufende Pause vorzeitig beendet werden.
 
 ---
 
-## Für maximale Zuverlässigkeit
+## Zuverlässigkeit
 
 1. App von der Akku-Optimierung ausnehmen (Button auf der Systemseite)
 2. „Nicht stören"-Berechtigung erteilen (Button auf der Systemseite)
-3. App nicht aus den zuletzt geöffneten Apps wegwischen – der Alarm-Dienst läuft zwar trotzdem im Hintergrund weiter, aber so ist es am sichersten
+3. App nicht aus den zuletzt geöffneten Apps entfernen – der Alarm-Dienst läuft zwar auch dann im Hintergrund weiter, ein Verbleib in den Recents erhöht aber die Zuverlässigkeit zusätzlich
