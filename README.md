@@ -54,4 +54,4 @@ Auf der Snooze-Seite kann eine Pause auch manuell in Minuten eingetragen oder ei
 
 App nicht aus den zuletzt geöffneten Apps entfernen – der Alarm-Dienst läuft zwar auch dann im Hintergrund weiter, ein Verbleib in den Recents erhöht aber die Zuverlässigkeit zusätzlich.
 
-⚠️ Auch mit allen Maßnahmen (Akku-Optimierung deaktiviert, „Nicht stören" erlaubt) gibt es **keine 100%ige Garantie** für eine zuverlässige Alarmauslösung – Android-Systemverhalten, Netzwerk- oder Sensorausfälle lassen sich nicht vollständig ausschließen.
+⚠️ Auch mit allen Maßnahmen (Akku-Optimierung deaktiviert, „Nicht stören" erlaubt) gibt es **keine 100%ige Garantie** für eine zuverlässige Alarmauslösung – je nach Systemverhalten kann Android den Hintergrunddienst in Einzelfällen dennoch beenden. Netzwerk- und Sensorausfälle werden dagegen erkannt und lösen selbst einen Alarm aus (siehe oben).
