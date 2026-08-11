@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">wecker</string>
+    <string name="alarm_title">Alarm aktiv</string>
+    <string name="monitoring_title">Nightscout Überwachung</string>
+    <string name="stop_monitoring">System aus</string>
+    <string name="monitoring_channel_name">Überwachung</string>
+    <string name="alarm_channel_name">Alarm</string>
+</resources>
