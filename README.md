@@ -52,6 +52,6 @@ Auf der Snooze-Seite kann eine Pause auch manuell in Minuten eingetragen oder ei
 
 ## Zuverlässigkeit
 
-1. App von der Akku-Optimierung ausnehmen (Button auf der Systemseite)
-2. „Nicht stören"-Berechtigung erteilen (Button auf der Systemseite)
-3. App nicht aus den zuletzt geöffneten Apps entfernen – der Alarm-Dienst läuft zwar auch dann im Hintergrund weiter, ein Verbleib in den Recents erhöht aber die Zuverlässigkeit zusätzlich
+App nicht aus den zuletzt geöffneten Apps entfernen – der Alarm-Dienst läuft zwar auch dann im Hintergrund weiter, ein Verbleib in den Recents erhöht aber die Zuverlässigkeit zusätzlich.
+
+⚠️ Auch mit allen Maßnahmen (Akku-Optimierung deaktiviert, „Nicht stören" erlaubt) gibt es **keine 100%ige Garantie** für eine zuverlässige Alarmauslösung – Android-Systemverhalten, Netzwerk- oder Sensorausfälle lassen sich nicht vollständig ausschließen.
